@@ -144,31 +144,7 @@ const Sidebar = () => {
               <span className="fl icon icon-user-mgmt"></span>
               <span className="fl nav-text">User Management</span>
             </Link>
-          </li>
-          <li className="fl w100">
-            <Link to={PowerBiUrl} target="_blank" className="fl w100 d-flex">
-              <span className="fl icon icon-data-insight"></span>
-              <span className="fl nav-text">Data Insights</span>
-            </Link>
-          </li>
-          {/* <li className="fl w100">
-            <Link to='https://survey123.arcgis.com/share/fc2e373f48994cb1a75c39cbb18992bc/result/overview' target="_blank" className="fl w100 d-flex">
-              <span className="fl icon icon-data-insight"></span>
-              <span className="fl nav-text">Survey123 Portal</span>
-            </Link>
-          </li> */}
-          {/* <li className="fl w100">
-            <Link to='https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=GiOt0jQNpRNzbX8Q&response_type=token&expiration=20160&redirect_uri=http://localhost:3000/survey123' target="_self" className="fl w100 d-flex">
-              <span className="fl icon icon-data-insight"></span>
-              <span className="fl nav-text">Survey Details</span>
-            </Link>
-          </li> */}
-          <li className="fl w100">
-            <Link to='/survey' target="_self" className="fl w100 d-flex">
-              <span className="fl icon icon-data-insight"></span>
-              <span className="fl nav-text">ArcGis Survey</span>
-            </Link>
-          </li>
+          </li>                            
         </ul>
         <button onClick={collapseSideBar} className="collapse-button icon icon-down"
           id="collapseButton"
