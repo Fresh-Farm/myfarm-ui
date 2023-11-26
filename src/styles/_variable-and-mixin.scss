@@ -1,0 +1,41 @@
+$Primary-color: #138747;
+$Secondry-color: #1DA2BB;
+$white: #fff;
+$heading-color: #142D50;
+$heading-family: 'Futura', sans-serif;
+$border-radius: 6px;
+$border: 1px solid rgba(33, 108, 138, 0.159);
+$gradient: linear-gradient(174.53deg, #216C8A 18.58%, #14874C 100%);
+
+$button-primary-clr: #216C8A;
+
+// Define the Buttons
+@mixin button($bg-color, $text-color, $icon: null) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px;
+    text-align: center;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+     // Add icon styles
+  @if ($icon) {
+    &::before {
+        content: '';
+        display: inline-block;
+        background: transparent $icon no-repeat center;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+      }
+  }
+  
+  @content;
+  }

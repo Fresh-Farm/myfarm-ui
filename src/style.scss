@@ -1,0 +1,294 @@
+@import "./styles/_reset.scss";
+@import "./styles/_fonts.scss";
+@import "./styles/_icon.scss";
+@import "./styles/_variable-and-mixin.scss";
+@import "./styles/_common.scss";
+
+.iframe {
+  height: 100vh;
+}
+.modal-holder {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+
+  // optional
+  // display: none;
+
+  .modal {
+    &-header {
+      &--text {
+        font-size: 1.1rem;
+        color: $heading-color;
+        font-family: $heading-family;
+      }
+      .btn-close {
+        background-color: transparent;
+        padding: 0;
+        &::before {
+          background-image: $icon-close;
+          background-size: 30px;
+        }
+      }
+    }
+    &-body {
+      .descp {
+        font-size: 0.9rem;
+        color: $heading-color;
+        margin: 0.8rem 0 0 0;
+        line-height: 1.5;
+      }
+      .sub-details {
+        margin: 1rem 0;
+        li {
+          margin-top: 0.5rem;
+        }
+        .sub-head {
+          color: $heading-color;
+          font-family: $heading-family;
+        }
+        .attribute {
+          color: $heading-color;
+          font-weight: 500;
+          margin-right: 0.5rem;
+          &-value {
+            color: $heading-color;
+          }
+        }
+      }
+    }
+    &-footer {
+      .btn-details {
+        flex-direction: row-reverse;
+        &:before {
+          background-image: $icon-external-link;
+        }
+      }
+    }
+  }
+}
+
+.flowSiteplan-container {
+  position: relative;
+  .flowSiteplan {
+    &-top,
+    &-bottom {
+      height: 49.5vh;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    &-top {
+      .flowSiteplan-header--title {
+        background: #f7981d;
+        color: #142d50;
+      }
+    }
+    &-bottom {
+      .flowSiteplan-header--title {
+        background: #142d50;
+        color: $white;
+      }
+    }
+    &-header {
+      padding: 1rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      &--title {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        box-shadow: 4px 4px 14px rgba(0, 83, 123, 0.1);
+        backdrop-filter: blur(7px);
+        border-radius: 6px;
+      }
+    }
+  }
+  .sperate-bar {
+    position: absolute;
+    top: 48%;
+    left: -2px;
+    cursor: n-resize;
+    z-index: 9999;
+  }
+}
+
+// .leaflet css
+.leaflet-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  .leaflet-popup-content {
+    width: 450px !important;
+  }
+  .leaflet-control-attribution a,
+  .leaflet-touch .leaflet-control-attribution {
+    font-size: 0.6rem;
+  }
+}
+
+.legend-details {
+  float: right;
+  position: absolute;
+  right: 70px;
+  top: 70px;
+  height: 320px;
+  overflow: auto;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  color: $heading-color;
+  .legend-name {
+    background: rgba(145, 146, 144, 0.25);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 0.5rem;
+  }
+  li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+.full-screen.legend-details{
+  position: absolute;
+  background-color: #fffffff2;
+  top: unset;
+  left: 1rem;;
+  height: 150px;
+  bottom: 1rem;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, (minmax(250px, 1fr)));
+  max-width: 98%;
+}
+
+.login{
+  &-wrapper {
+    > * {
+      width: 50%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+  &-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 3rem;
+    color: #142D50;
+    .btn-title{
+      font-weight: 600;
+    }
+    .btn-grp{
+      margin-top: 1rem;
+      .btn-login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 30px;
+        border: $border;
+        height: 180px;
+        width: 180px;
+        &:first-child{
+          background: linear-gradient(90deg, #216C8A 0%, #14874C 108.44%);
+          border-radius: 12px;
+          color: #fff;
+        }
+      }
+    }
+    .link{
+      color: #216C8A;
+    }
+  }
+  &-title{
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    span{
+      &:first-child{
+        font-weight: 600;
+        color: #148E4B;
+      }
+    }
+  }
+  &-footer{
+    border-top: $border;
+    padding-top: 1rem;
+  }
+}
+
+// Leaflet css
+.leaflet-container{
+  .leaflet-popup-close-button {
+    top: 0.6rem !important;
+    right: 0.6rem !important;
+    > span {
+      font-size: 2rem;
+    }
+  }
+}
+
+.decreseWidthViewDetails .flowSiteplan-header{
+  width: calc(100% - 400px);
+}
+
+.decreseWidthSidebar .flowSiteplan-header{
+  width: calc(100% - 400px);
+}
+
+// Speedometer Css
+
+.speed-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  svg{
+    height: 220px !important;
+  }
+}
+.mobHeader{
+  display: none;
+}
+.m-none {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menuIcon{
+  height: 36px;
+  width: 36px;
+  span{
+    background: $icon-menu;
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
+}
+.btn-transparent.backBtn{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@import "./styles/_responsive.scss";

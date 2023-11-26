@@ -1,0 +1,402 @@
+@media (min-width: 320px) and (max-width: 1024px) {
+    /* login page css */
+    .login-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > * {
+            width: 100%;
+        }
+        .login-content {
+            position: absolute;
+            background: #fff;
+            width: fit-content;
+            height: fit-content;
+            padding: 2rem;
+            gap: 2rem;
+            .login-title {
+                flex-direction: unset;
+                gap: 15px;
+                justify-content: center;
+                font-size: 4rem;
+            }
+            .btn-title {
+                text-align: center;
+            }
+            .btn-grp {
+                justify-content: center;
+            }
+            .login-footer {
+                p {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .content-wrapper {
+        .content-header {
+            width: 100%;
+            position: relative;
+        }
+        .form-container{
+            margin-top: 0;
+        }
+    }
+    /* login page css */
+    /* Home page css */
+    .sidebar {
+        z-index: 99999;
+    }
+    .content-wrapper {
+        margin-left: unset;
+        width: 100%;
+    }
+    .collapsed .content-wrapper{
+        width: calc(100% - 70px);
+    }
+    /* Home page css */
+    /* common css */
+    .btn-grp {
+        gap: .7rem;
+    }
+    .flowSiteplan-container {
+        .flowSiteplan-header--title {
+            font-size: 0.8rem;
+        }
+    }
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .maps-ctrl button img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+    .modal-header h2 {
+        font-size: 20px;
+    }
+    .assetId {
+        font-size: 15px;
+    }
+    p {
+        font-size: 16px;
+    }
+    h4 {
+        font-size: 15px;
+    }
+    /* common css */
+
+    .view-sitemap {
+        .working-status {
+            .risk-legend {
+                li {
+                    padding: 0.3rem 0.6rem;
+                }
+            }
+        }
+    }
+    .legend-details {
+        top: 60px;
+        height: 304px;
+    }
+    .content-header {
+        width: calc(100% - 40px);
+    }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+    /* login page css */
+    .login-wrapper {
+        .login-content {
+            padding: 1.5rem;
+            gap: 1.5rem;
+            .login-title {
+                font-size: 3rem;
+            }
+            .btn-grp {
+                .btn-login {
+                    height: 150px;
+                    width: 150px;
+                    padding: 0px 20px;
+                }
+            }
+        }
+    }
+    /* login page css */
+    .legend-details {
+        width: 37% !important;
+        .legend-name {
+            min-width: 18px;
+            min-height: 18px;
+            font-size: 10px;
+        }
+        li {
+            font-size: 0.8rem;
+        }
+    }
+    .full-screen.legend-details {
+        max-width: 95% !important;
+        width: 100% !important;
+    }
+    .form-wrapper {
+        flex-direction: column;
+        margin: 1rem 0;
+        gap: unset;
+    }
+    .hint-text {
+        right: 30px;
+        left: unset;
+        padding: .8rem;
+    }
+    .flowSiteplan-container .flowSiteplan-top .flowSiteplan-header--title {
+        margin-bottom: 8px;
+    }
+    .image-gallery--wrapper{
+        grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+    }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+    .sidebar {
+        width: 260px;
+    }
+    /* login page css */
+    .login-wrapper {
+        .login-content {
+            max-width: 90%;
+            width: 100%;
+            .login-title {
+                font-size: 2rem;
+            }
+            .btn-grp {
+                .btn-login {
+                    height: 120px;
+                    width: 120px;
+                    padding: 0px 20px;
+                }
+            }
+            .login-footer {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    /* login page css */
+    .full-screen.legend-details {
+        left: 0.7rem;
+        bottom: 2.2rem;
+    }
+    .legend-details {
+        top: 44px;
+        height: 209px;
+        right: 52px;
+        width: 60% !important;
+    }
+    .flowSiteplan-container {
+        .flowSiteplan-top {
+            height: calc(100vh - 67px);
+            &.flowSiteplanFullScreen{
+                z-index: 999;
+                .flowSiteplan-header{
+                    margin-top: 0;
+                }
+            }
+            .flowSiteplan-header--title {
+                font-size: 0.7rem;
+                font-weight: 100;
+                padding: 8px;
+            }
+        }
+        .flowSiteplan-header {
+            padding: 0.6rem;
+        }
+        .sperate-bar{
+            height: 10px;
+            object-fit: cover
+        }
+    }
+    .maps-ctrl {
+        display: flex;
+        flex-direction: column;
+    }
+    .flowSiteplan-bottom {
+        background: #fff;
+        .flowSiteplan-header {
+            margin-top: 0;
+            position: relative;
+        }
+        .flowSiteplan-header--title {
+            max-width: 80%;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+    .flowSiteplan-bottom svg {
+        margin-top: 0;
+    }
+    .view-sitemap {
+        z-index: 999999;
+        width: 100%;
+        .modal-details {
+            padding-bottom: 0;
+            max-height: calc(100vh - 192px);
+            li {
+                padding: 10px;
+                .icon {
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                }
+            }
+        }
+    }
+    .icon.icon-setting {
+        width: 22px;
+        height: 22px;
+    }
+    .speed-wrapper svg {
+        width: 281px !important;
+    }
+    .btn-secondry::before,
+    .btn-transparent::before {
+        height: 18px;
+        width: 18px;
+    }
+    .btn-transparent::before {
+        gap: unset;
+    }
+
+    .descp {
+        margin: 0.9rem 0 0 0;
+    }
+    button {
+        padding: 8px !important;
+    }
+    label {
+        font-size: 0.9rem;
+    }
+    select,
+    input,
+    .input {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+    .content-header--title {
+        font-size: 1rem;
+    }
+    .mobHeader {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(174.53deg, #216C8A 18.58%, #14874C 100%);
+        z-index: 999;
+        position: relative;
+        position: absolute;
+        img {
+            max-width: 140px;
+        }
+    }
+    .sidebar {
+        height: fit-content;
+        position: absolute;
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+        z-index: 99999;
+        max-width: 80%;
+        width: 100%;
+        display: none;
+        .m-none {
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &.show {
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            max-width: 80%;
+            z-index: 999999;
+            .m-none {
+                display: flex;
+            }
+        }
+    }
+    .flowSiteplan-top .flowSiteplan-header {
+        margin-top: 4rem;
+    }
+    .collapsed {
+        &:before {
+            content: '';
+            background: #000000bf;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+        }
+        .sidebar {
+            position: fixed;
+            display: flex;
+            width: 85%;
+            .nav-text, ul li .icon-right{
+                display: block;
+            }
+            ul li.open ul{
+                display: block;
+            }
+            .logo img {
+                object-fit: cover;
+                object-position: 0px;
+                height: 60px;
+            }
+        }
+    }
+    .content-wrapper {
+            margin-left: unset;
+            width: 100%;
+        .container {
+            padding: 0 1rem;
+            margin-top: 4rem;
+        }
+        .form-container {
+            .input-wrapper {
+                flex-direction: column;
+                display: flex;
+                padding: 10px;
+            }
+            .image-gallery .content-header {
+                top: 0;
+            }
+        }
+    }
+    .leaflet-container .leaflet-popup-content {
+        width: 300px !important;
+        padding: 14px;
+        margin: 0;
+        .modal-holder .modal-header--text{
+            font-size: 1rem;
+        }
+    }
+    .btn-transparent.backBtn{
+        &::before{
+            height: 18px;
+            width: 21px;
+            background-size: 25px;
+            background-position: 4px -3px;
+        }
+        .btn-txt {
+            display: none;
+        }
+    }
+
+    .sperate-bar {
+        z-index: 99999;
+    }
+}
