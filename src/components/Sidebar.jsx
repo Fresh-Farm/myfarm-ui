@@ -93,16 +93,12 @@ const Sidebar = () => {
         </button>
       </div>
       <aside className={`fl sidebar ${isAsideVisible ? "show" : ""}`}>
-        <Link to="/" className="fl w100 logo">
-          <img src={Logo} alt="UK Procurement Logo" />
-          <h1 className="sr-only">City of Baltimore</h1>
+        <Link to="/" className="fl w100 logo">          
+          <h1 className="sr-only">My Farm</h1>
         </Link>
         <br />
         <br />
         <br />
-        {/* <button className="fl w100 btn-primary" disabled={true}>
-            <span className="btn-txt">Create New Project</span>
-          </button> */}
         <ul className="fl w100 navigation">
           <li className="fl w100">
             <Link to="/home" className="fl w100 d-flex">
@@ -144,7 +140,7 @@ const Sidebar = () => {
               <span className="fl icon icon-user-mgmt"></span>
               <span className="fl nav-text">User Management</span>
             </Link>
-          </li>                            
+          </li>
         </ul>
         <button onClick={collapseSideBar} className="collapse-button icon icon-down"
           id="collapseButton"
