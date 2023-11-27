@@ -18,8 +18,16 @@ import {
   setIsViewDetailsBarCollapsed,
 } from "../redux/slices/sideBarSlice";
 import { GetData } from "../services/GetService";
+import LocationData from '../Data/Location.json'
+import UserData from '../Data/UserData.json'
 
 const Sidebar = () => {
+  //#region useState
+  const [users, setusers] = useState(UserData);
+  const [location, setlocation] = useState(LocationData);
+  const [owner, setowner] = useState('Guest');
+  //#endregion useState
+
   const { userName } = useSelector((state) => state.userDetails);
   const { isSideNavigationBarCollapsed, isViewDetailsBarCollapsed } =
     useSelector((state) => state.sideBarSlice);
@@ -29,6 +37,7 @@ const Sidebar = () => {
   const { projects } = useSelector((state) => state.projectDetailsSlice);
   const UserName = userName.split(",");
   let ShortFormName = `${UserName[1]}, ${UserName[0]}`;
+
 
   const collapseSideBar = () => {
     dispatch(setIsSideNavigationBarCollapsed(!isSideNavigationBarCollapsed));
@@ -41,30 +50,38 @@ const Sidebar = () => {
   };
 
   const ProjectData = async () => {
-    await GetData(GetProjectsEndPoint).then((response) => {
-      dispatch(setProjects(response));
-      return response;
-    });
+    // await GetData(GetProjectsEndPoint).then((response) => {
+    //   dispatch(setProjects(response));
+    //   return response;
+    // });    
+    dispatch(setProjects(location));
   };
 
   const handleSelectProject = (project) => {
-    dispatch(setIsViewDetailsBarCollapsed(true))
-    if (project.id === 1) {
-      dispatch(setIsBackRiverWasteWaterTreatmentSelected(true))
-    } else {
-      dispatch(setIsBackRiverWasteWaterTreatmentSelected(false))
-    }
+    dispatch(setIsViewDetailsBarCollapsed(true))    
     dispatch(setSelectedProject(project))
-    if (project.latitude && project.longitude) {
-      dispatch(setSelectedAssetLocation([]))
-      dispatch(setSelectedProjectLocation([project.latitude, project.longitude]))
+    if (project.locationLatitude && project.locationLongitude) {
+      // dispatch(setSelectedAssetLocation([]))
+      dispatch(setSelectedProjectLocation([project.locationLatitude, project.locationLongitude]))
     }
   };
+
+  const SetOwner = () => {    
+    var name = users.filter((el) => {
+      return location.some((f) => {
+        return f.ownerId === el.id;
+      });
+    });
+    setowner(name[0].userName);
+    
+  }
 
   useEffect(() => {
     dispatch(setIsSideNavigationBarCollapsed(false));
     ProjectData();
+    SetOwner()
   }, []);
+
 
   useEffect(() => {
     if (!isViewDetailsBarCollapsed && !isSideNavigationBarCollapsed) {
@@ -83,18 +100,14 @@ const Sidebar = () => {
   return (
     <>
       <div className="fl w100 mobHeader">
-        <button
-          onClick={collapseSideBar}
-          className="collapse-button menuIcon"
-          id="collapseButton"
-        >
+        <button onClick={collapseSideBar} className="collapse-button menuIcon" id="collapseButton">
           <span className="fl"></span>
           <span className="sr-only">Menu</span>
         </button>
       </div>
       <aside className={`fl sidebar ${isAsideVisible ? "show" : ""}`}>
-        <Link to="/" className="fl w100 logo">          
-          <h1 className="sr-only">My Farm</h1>
+        <h1 className="fl nav-text" style={{ alignSelf: 'center', color: 'ghostwhite' }}>Welcome {owner}</h1>
+        <Link to="/" className="fl w100 logo">
         </Link>
         <br />
         <br />
@@ -110,20 +123,20 @@ const Sidebar = () => {
             <ul onClick={toggleProjectDropDown} className="fl w100 d-flex">
               <li class="fl w100 d-flex projects">
                 <span className="fl icon icon-projects"></span>
-                <span className="fl nav-text">Projects</span>
+                <span className="fl nav-text">My Farm</span>
                 <span className="fl icon icon-down-white icon-right"></span>
               </li>
             </ul>
             <ul className="fl w100">
-              {projects && projects.length ? (
-                projects.map((project, index) => (
+              {location && location.length ? (
+                location.map((project, index) => (
                   <li className="fl w100" key={index} onClick={() => handleSelectProject(project)}>
                     <Link to="/project" className="fl w100 d-flex">
                       <span className="fl icon icon-backriver-plant"></span>
                       <span
                         className="fl nav-text"
                       >
-                        {project.name}
+                        {project.locationName}
                       </span>
                     </Link>
                   </li>
@@ -138,7 +151,25 @@ const Sidebar = () => {
           <li className="fl w100">
             <Link to="#" className="fl w100 d-flex">
               <span className="fl icon icon-user-mgmt"></span>
-              <span className="fl nav-text">User Management</span>
+              <span className="fl nav-text">Analyze</span>
+            </Link>
+          </li>
+          <li className="fl w100">
+            <Link to="#" className="fl w100 d-flex">
+              <span className="fl icon icon-user-mgmt"></span>
+              <span className="fl nav-text">Personlaize</span>
+            </Link>
+          </li>
+          <li className="fl w100">
+            <Link to="#" className="fl w100 d-flex">
+              <span className="fl icon icon-user-mgmt"></span>
+              <span className="fl nav-text">About</span>
+            </Link>
+          </li>
+          <li className="fl w100">
+            <Link to="#" className="fl w100 d-flex">
+              <span className="fl icon icon-user-mgmt"></span>
+              <span className="fl nav-text">Contact Us</span>
             </Link>
           </li>
         </ul>

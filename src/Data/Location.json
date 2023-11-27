@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "locationName": "Location 01",
+      "locationCenter": "./static/images/vigo.png",
+      "locationLatitude": "28.61952274282844",
+      "locationLongitude":"79.7988927692598",
+      "geographicalArea":"_ztmD_}`fNJa@QMCKQNQO?EHGIACG@MIIELFDAJGJQRRCHB@J@HH?DDADDBB@?BFHFI??F@??@A",
+      "locationDescription":"Description of Location 01",
+      "ownerId":"1"
+    },
+    {
+        "id": 2,
+        "locationName": "Location 02",
+        "locationCenter": "./static/images/vigo.png",
+        "locationLatitude": "PKR 100 per excess km",
+        "locationLongitude":"",
+        "geographicalArea":"wytmDyy`fNz@b@T`@THh@T^A@IH_@Ts@o@Sa@KFMYC[Se@YGTYJ??Kv@",
+        "locationDescription":"Description of Location 02",
+        "ownerId":1
+      }
+]

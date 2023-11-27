@@ -9,13 +9,13 @@ const Home = () => {
   const { projects } = useSelector((state) => state.projectDetailsSlice);
   const dispatch = useDispatch();
 
-  const SetelliteMapView = () => {
+  const SatelliteMapView = () => {
     return <SatelliteView />;
 
   };
 
   useEffect(() => {
-    SetelliteMapView();
+    SatelliteMapView();
   }, [isSideNavigationBarCollapsed]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Home = () => {
     <>
       <div>
         <div className="fl content-wrapper">
-          <SetelliteMapView />
+          <SatelliteMapView />
         </div>
       </div>
     </>
