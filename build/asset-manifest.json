@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/myfarm-ui/static/css/main.1de710fe.css",
-    "main.js": "/myfarm-ui/static/js/main.5707bc54.js",
+    "main.js": "/myfarm-ui/static/js/main.c5145066.js",
     "static/js/787.1f698150.chunk.js": "/myfarm-ui/static/js/787.1f698150.chunk.js",
     "static/media/user.svg": "/myfarm-ui/static/media/user.d6b528a037186e4193df.svg",
-    "static/media/baltimorePage.png": "/myfarm-ui/static/media/baltimorePage.6bbb144ddcbdefac7c50.png",
     "static/media/Flow_Back_River.svg": "/myfarm-ui/static/media/Flow_Back_River.77685b5d1b88ec01e8794829429ec1bc.svg",
     "static/media/Flow_Patapsco.svg": "/myfarm-ui/static/media/Flow_Patapsco.b6cee29529b0d8e98e08cf093ecb9f31.svg",
     "static/media/ProximaNova-Regular.ttf": "/myfarm-ui/static/media/ProximaNova-Regular.23ef50eaf64ea3aad27c.ttf",
@@ -12,7 +11,6 @@
     "static/media/Futura-Bold.ttf": "/myfarm-ui/static/media/Futura-Bold.af2baf7e901aacf5b47b.ttf",
     "static/media/logo-dpw.svg": "/myfarm-ui/static/media/logo-dpw.964b58fb6899dab6813f5975665a7f57.svg",
     "static/media/logo-icon-only.svg": "/myfarm-ui/static/media/logo-icon-only.e0c158cb6702f4ff8de62a724e8d4196.svg",
-    "static/media/AtkinsRealisLogog.svg": "/myfarm-ui/static/media/AtkinsRealisLogog.ccf1d89607fca857d251870ae6c06e20.svg",
     "static/media/setting.svg": "/myfarm-ui/static/media/setting.82085b4f6ab37d8a1c64.svg",
     "static/media/sperate-bar.svg": "/myfarm-ui/static/media/sperate-bar.11d59718605cedb86227faaaa12cf344.svg",
     "static/media/user-mgmt.svg": "/myfarm-ui/static/media/user-mgmt.f997ab29fc8cf115575c.svg",
@@ -39,11 +37,11 @@
     "static/media/down.svg": "/myfarm-ui/static/media/down.0fa01044654cd3075517.svg",
     "static/media/external-link.svg": "/myfarm-ui/static/media/external-link.a6a94078dbc04f14ee53.svg",
     "main.1de710fe.css.map": "/myfarm-ui/static/css/main.1de710fe.css.map",
-    "main.5707bc54.js.map": "/myfarm-ui/static/js/main.5707bc54.js.map",
+    "main.c5145066.js.map": "/myfarm-ui/static/js/main.c5145066.js.map",
     "787.1f698150.chunk.js.map": "/myfarm-ui/static/js/787.1f698150.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1de710fe.css",
-    "static/js/main.5707bc54.js"
+    "static/js/main.c5145066.js"
   ]
 }
