@@ -58,22 +58,21 @@ const Sidebar = () => {
   };
 
   const handleSelectProject = (project) => {
-    dispatch(setIsViewDetailsBarCollapsed(true))    
+    dispatch(setIsViewDetailsBarCollapsed(true))
     dispatch(setSelectedProject(project))
     if (project.locationLatitude && project.locationLongitude) {
-      // dispatch(setSelectedAssetLocation([]))
       dispatch(setSelectedProjectLocation([project.locationLatitude, project.locationLongitude]))
     }
   };
 
-  const SetOwner = () => {    
+  const SetOwner = () => {
     var name = users.filter((el) => {
       return location.some((f) => {
         return f.ownerId === el.id;
       });
     });
     setowner(name[0].userName);
-    
+
   }
 
   useEffect(() => {
@@ -148,13 +147,13 @@ const Sidebar = () => {
               )}
             </ul>
           </li>
-          <li className="fl w100">
+          {/* <li className="fl w100">
             <Link to="#" className="fl w100 d-flex">
               <span className="fl icon icon-user-mgmt"></span>
               <span className="fl nav-text">Analyze</span>
             </Link>
-          </li>
-          <li className="fl w100">
+          </li> */}
+          {/* <li className="fl w100">
             <Link to="#" className="fl w100 d-flex">
               <span className="fl icon icon-user-mgmt"></span>
               <span className="fl nav-text">Personlaize</span>
@@ -171,7 +170,7 @@ const Sidebar = () => {
               <span className="fl icon icon-user-mgmt"></span>
               <span className="fl nav-text">Contact Us</span>
             </Link>
-          </li>
+          </li> */}
         </ul>
         <button onClick={collapseSideBar} className="collapse-button icon icon-down"
           id="collapseButton"

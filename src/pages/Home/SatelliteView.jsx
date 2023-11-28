@@ -34,9 +34,9 @@ const SatelliteView = () => {
             positions={polyUtil.decode(project.geographicalArea)}
             key={index}
           >
-            {/* <Popup position="right bottom">
+            <Popup position="right bottom">
               <ProjectDetailsPopup project={project} />
-            </Popup> */}
+            </Popup>
           </Polygon>
         );
       })}

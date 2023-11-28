@@ -20,7 +20,7 @@ const ViewAssetDeatils = ({ assetDetails, isEditDisabled }) => {
       <div className="fl w100 modal-header">
         <h2 className="fl">Details</h2>
         <div className="fr d-flex icon-grp">
-          {assetDetailsInfo &&!isEditDisabled && (
+          {assetDetailsInfo && !isEditDisabled && (
             <Link className="fl edit icon icon-edit" to="/project/edit">
               <span className="sr-only">Edit</span>
             </Link>
@@ -36,31 +36,12 @@ const ViewAssetDeatils = ({ assetDetails, isEditDisabled }) => {
       {assetDetailsInfo ? (
         <div>
           <div className="fl w100 sub-modal-header">
-            <h3 className="fl assetId-initial">
-              {assetDetailsInfo.zone ? assetDetailsInfo.zone : "NA"}
-            </h3>
             <div className="fl">
               <h3 className="fl w100 assetId">
-                {assetDetailsInfo.asset ? assetDetailsInfo.asset : "NA"}
+                {assetDetailsInfo.name ? assetDetailsInfo.name : "NA"}
               </h3>
-              <span className="fl w100 count">
-                Total: {assetDetailsInfo ? assetDetailsInfo.totalCount : "0"}
-              </span>
+
             </div>
-          </div>
-          <div className="fl w100 working-status">
-            <div className="fl status-title">
-              <span className="fl icon icon-setting"></span>
-              <p className="fl">Working Status</p>
-            </div>
-            <ul className="fl risk-legend">
-              <li className="fl green">
-                {assetDetailsInfo ? assetDetailsInfo.activeCount : "No Data"}
-              </li>
-              <li className="fl red">
-                {assetDetailsInfo ? assetDetailsInfo.inactiveCount : "No Data"}
-              </li>
-            </ul>
           </div>
 
           <ul className="fl w100 modal-details scroll-custom ">
@@ -68,9 +49,9 @@ const ViewAssetDeatils = ({ assetDetails, isEditDisabled }) => {
               <div className="fl w100 info-head">
                 <span className="fl icon icon-target"></span>
                 <div className="fl w100 info">
-                  <h4 className="fl w100">Purpose</h4>
+                  <h4 className="fl w100">Area</h4>
                   <p className="fl w100">
-                    {assetDetailsInfo ? assetDetailsInfo.purpose : "No Data"}
+                    {assetDetailsInfo ? assetDetailsInfo.area : "No Data"}
                   </p>
                 </div>
               </div>
@@ -79,93 +60,23 @@ const ViewAssetDeatils = ({ assetDetails, isEditDisabled }) => {
               <div className="fl w100 info-head">
                 <span className="fl icon icon-target"></span>
                 <div className="fl w100 info">
-                  <h4 className="fl w100">Process Impacts-Failure</h4>
+                  <h4 className="fl w100">Yield</h4>
                   <p className="fl w100">
                     {assetDetailsInfo
-                      ? assetDetailsInfo.processImpactsFailure
+                      ? assetDetailsInfo.yield
                       : "No Data"}
                   </p>
                 </div>
               </div>
-            </li>
+            </li>            
             <li className="fl w100">
               <div className="fl w100 info-head">
                 <span className="fl icon icon-target"></span>
                 <div className="fl w100 info">
-                  <h4 className="fl w100">Permit Compliance Risk</h4>
+                  <h4 className="fl w100">Description/Details</h4>
                   <p className="fl w100">
                     {assetDetailsInfo
-                      ? assetDetailsInfo.permitComplianceRisk
-                      : "No Data"}
-                  </p>
-                </div>
-              </div>
-              <span className="fl w100 mb-2"></span>
-              <div className="fl w100 speed-wrapper">
-                <strong>Effulent Quality</strong>
-                
-                {/* <ReactSpeedometer
-                  minValue={0}
-                  maxValue={10000}
-                  segments={2}
-                  needleHeightRatio={0.7}
-                  value={
-                    assetDetailsInfo ? assetDetailsInfo.effluentQuality : 0
-                  }
-                  customSegmentLabels={[
-                    {
-                      text: "Low",
-                      position: "INSIDE",
-                      color: "#555",
-                    },
-                    {
-                      text: "High",
-                      position: "INSIDE",
-                      color: "#555",
-                    },
-                  ]}
-                  ringWidth={37}
-                  needleTransitionDuration={8333}
-                  needleTransition="easeElastic"
-                  needleColor={"#90f2ff"}
-                  textColor={"#d8dee9"}
-                /> */}
-                <strong>Sludge Quality</strong>
-                {/* <img src={meter} alt={meter} /> */}
-                {/* <ReactSpeedometer
-                  minValue={0}
-                  maxValue={10000}
-                  segments={2}
-                  needleHeightRatio={0.7}
-                  value={assetDetailsInfo ? assetDetailsInfo.sludgeQuality : 0}
-                  customSegmentLabels={[
-                    {
-                      text: "Low",
-                      position: "INSIDE",
-                      color: "#555",
-                    },
-                    {
-                      text: "High",
-                      position: "INSIDE",
-                      color: "#555",
-                    },
-                  ]}
-                  ringWidth={47}
-                  needleTransitionDuration={8333}
-                  needleTransition="easeElastic"
-                  needleColor={"#90f2ff"}
-                  textColor={"#d8dee9"}
-                /> */}
-              </div>
-            </li>
-            <li className="fl w100">
-              <div className="fl w100 info-head">
-                <span className="fl icon icon-target"></span>
-                <div className="fl w100 info">
-                  <h4 className="fl w100">Current Conditions</h4>
-                  <p className="fl w100">
-                    {assetDetailsInfo
-                      ? assetDetailsInfo.currentConditions
+                      ? assetDetailsInfo.description
                       : "No Data"}
                   </p>
                 </div>

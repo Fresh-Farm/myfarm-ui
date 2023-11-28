@@ -1,0 +1,76 @@
+[
+  {    
+    "locationId": "1",
+    "Area":"4046.86",
+    "crops": [
+      {
+        "id": "1",
+        "name": "Onion",
+        "geographicalArea": "kytmDuy`fNXN??^wAWKIRW|@",
+        "latitude": "28.61977",
+        "longitude": "79.79963",
+        "description": "This area shows yield and area covered by onion",
+        "shapeType": "Polygon",
+        "color": "pink",
+        "yield":"50%",
+        "area":"1000"
+      },
+      {
+        "id": "2",
+        "name": "Potato",
+        "geographicalArea": "ixtmDgy`fNZmATPRAUvAo@Y",
+        "latitude": "28.61955285837709",
+        "longitude": "79.79952193708907",
+        "description": "This area shows yield and area covered by potato",
+        "shapeType": "Polygon",
+        "color": "Yellow",
+        "yield":"80%",
+        "area":"2010"
+      },
+      {
+        "id": "3",
+        "name": "Tomato",
+        "geographicalArea": "svtmDmx`fNViAXLUfA[K",
+        "latitude": "28.61934",
+        "longitude": "79.79942",
+        "description": "This area shows yield and area covered by tomato",
+        "shapeType": "Polygon",
+        "color": "Red",
+        "yield":"",
+        "area":"1000"
+      }
+    ]
+  },
+  {
+    "locationId": "2",
+    "Area":"2023",
+    "crops": [
+      {
+        "id": "1",
+        "name": "Mango",
+        "geographicalArea": "q{tmD_}`fN^JPSJ]QISBWj@",
+        "latitude": "28.62008",
+        "longitude": "79.80010",
+        "description": "This area shows yield and area covered by mango",
+        "ShapeType": "Polygon",
+        "color": "Green",
+        "yield":"95%",
+        "area":"1500",
+        "count":"50"
+      },
+      {
+        "id": "2",
+        "name": "Lemon",
+        "geographicalArea": "s{tmDi~`fNIGUFLYBBHMAMECDKFH?PBBCFAX",
+        "latitude": "28.62028590833699",
+        "longitude": "79.8003303192179",
+        "description": "This area shows yield and area covered by lemon",
+        "ShapeType": "Polygon",
+        "color": "Yellow",
+        "yield":"80%",
+        "area":"500",
+        "count":"50"
+      }      
+    ]
+  }
+]
