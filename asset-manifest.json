@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myfarm-ui/static/css/main.1de710fe.css",
-    "main.js": "/myfarm-ui/static/js/main.c5145066.js",
+    "main.js": "/myfarm-ui/static/js/main.9793755c.js",
     "static/js/787.1f698150.chunk.js": "/myfarm-ui/static/js/787.1f698150.chunk.js",
     "static/media/user.svg": "/myfarm-ui/static/media/user.d6b528a037186e4193df.svg",
     "static/media/Flow_Back_River.svg": "/myfarm-ui/static/media/Flow_Back_River.77685b5d1b88ec01e8794829429ec1bc.svg",
@@ -37,11 +37,11 @@
     "static/media/down.svg": "/myfarm-ui/static/media/down.0fa01044654cd3075517.svg",
     "static/media/external-link.svg": "/myfarm-ui/static/media/external-link.a6a94078dbc04f14ee53.svg",
     "main.1de710fe.css.map": "/myfarm-ui/static/css/main.1de710fe.css.map",
-    "main.c5145066.js.map": "/myfarm-ui/static/js/main.c5145066.js.map",
+    "main.9793755c.js.map": "/myfarm-ui/static/js/main.9793755c.js.map",
     "787.1f698150.chunk.js.map": "/myfarm-ui/static/js/787.1f698150.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1de710fe.css",
-    "static/js/main.c5145066.js"
+    "static/js/main.9793755c.js"
   ]
 }
